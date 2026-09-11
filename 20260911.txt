@@ -1,0 +1,2244 @@
+"id"	"created_time"	"field_schema_json"	"form_code"	"schema_version"	"form_definition_id"
+44	"2026-08-13 10:11:19.642856"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""unitName"",
+      ""label"": ""部室/區域中心/分行"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""destructionItems"",
+      ""label"": ""報毀檔案清冊"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 50 },
+      ""columns"": [
+        {
+          ""fieldName"": ""fileName"",
+          ""label"": ""檔案名稱"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""retentionPeriod"",
+          ""label"": ""起迄年度期間"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""數量"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1 }
+        },
+        {
+          ""fieldName"": ""unit"",
+          ""label"": ""單位"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 20 }
+        },
+        {
+          ""fieldName"": ""responsibleDepartment"",
+          ""label"": ""主管部室"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""reviewComment"",
+          ""label"": ""會核意見"",
+          ""type"": ""STRING"",
+          ""required"": false,
+          ""validation"": { ""maxLength"": 200 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""destructionDateTime"",
+      ""label"": ""銷毀日期及時間"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""destructionLocation"",
+      ""label"": ""銷毀地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""destructionMethod"",
+      ""label"": ""銷毀方式"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""supervisorPersonnel"",
+      ""label"": ""監毀人員"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 50 }
+    }
+  ]
+}
+"	"FILE_DESTRUCTION_APPROVAL_REGISTER"	1	44
+45	"2026-08-13 10:11:19.6907"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""unitName"",
+      ""label"": ""部室/區域中心/分行"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""fileNumber"",
+      ""label"": ""檔案號碼"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""destructionItems"",
+      ""label"": ""報毀檔案清冊"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 50 },
+      ""columns"": [
+        {
+          ""fieldName"": ""fileName"",
+          ""label"": ""檔案名稱"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""retentionYears"",
+          ""label"": ""保存年限（年）"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""fileYear"",
+          ""label"": ""檔案年度"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 20 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""數量（卷）"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""destructionDateTime"",
+      ""label"": ""銷毀日期及時間"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""destructionLocation"",
+      ""label"": ""銷毀地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""destructionMethod"",
+      ""label"": ""銷毀方式"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""supervisorPersonnel"",
+      ""label"": ""監毀人員"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxLength"": 50 }
+    }
+  ]
+}
+"	"FILE_RETENTION_EXPIRED_DESTRUCTION_REGISTER"	1	45
+47	"2026-08-13 10:11:19.769936"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""reportingUnit"",
+      ""label"": ""填報單位（分行/部）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""reportDate"",
+      ""label"": ""填報日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""firstAidPersonnel"",
+      ""label"": ""急救人員名單"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxRows"": 20 },
+      ""columns"": [
+        { ""fieldName"": ""employeeId"", ""label"": ""行員代號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } }
+      ]
+    },
+    {
+      ""fieldName"": ""firePreventionPersonnel"",
+      ""label"": ""防火管理人員名單"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxRows"": 20 },
+      ""columns"": [
+        { ""fieldName"": ""employeeId"", ""label"": ""行員代號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } }
+      ]
+    },
+    {
+      ""fieldName"": ""safetyOfficerPersonnel"",
+      ""label"": ""職業安全衛生業務主管名單"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxRows"": 20 },
+      ""columns"": [
+        { ""fieldName"": ""employeeId"", ""label"": ""行員代號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } }
+      ]
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"SAFETY_TRAINING_DESIGNATION_ROSTER"	1	47
+48	"2026-08-13 10:29:17.598575"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""orderingUnit"",
+      ""label"": ""訂購單位（分行/部門）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""orderDate"",
+      ""label"": ""訂購日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2
+    },
+    {
+      ""fieldName"": ""deliveryAddress"",
+      ""label"": ""收貨地址"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contactPhone"",
+      ""label"": ""連絡電話"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""extension"",
+      ""label"": ""分機"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 10 }
+    },
+    {
+      ""fieldName"": ""contactPerson"",
+      ""label"": ""聯絡人"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""orderItems"",
+      ""label"": ""訂購明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 20 },
+      ""columns"": [
+        {
+          ""fieldName"": ""style"",
+          ""label"": ""款式（男款短袖32TAB10614E $455／男款長袖32TAB10714E $490／女款短袖32TAB30614E $455／女款長袖32TAB30714E $490）"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 30 }
+        },
+        {
+          ""fieldName"": ""size"",
+          ""label"": ""尺寸（S/M/L/XL/2XL/3XL/4XL/5XL）"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 10 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""數量"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1, ""max"": 20 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""totalAmount"",
+      ""label"": ""訂購總金額（元）"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 8,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""其他備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 9,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"POLO_SHIRT_SELF_PAY_ORDER"	1	48
+49	"2026-08-13 11:10:09.652031"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""unitCode"",
+      ""label"": ""單位代號/名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""maleRoster"",
+      ""label"": ""男性申請名單"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxRows"": 5 },
+      ""columns"": [
+        { ""fieldName"": ""employeeId"", ""label"": ""行員編號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""行員姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } },
+        { ""fieldName"": ""size"", ""label"": ""尺寸（S/M/L/XL/2L）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 10 } },
+        { ""fieldName"": ""remarks"", ""label"": ""備註"", ""type"": ""STRING"", ""required"": false, ""validation"": { ""maxLength"": 100 } }
+      ]
+    },
+    {
+      ""fieldName"": ""femaleRoster"",
+      ""label"": ""女性申請名單"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxRows"": 5 },
+      ""columns"": [
+        { ""fieldName"": ""employeeId"", ""label"": ""行員編號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""行員姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } },
+        { ""fieldName"": ""size"", ""label"": ""尺寸（S/M/L/XL/2L）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 10 } },
+        { ""fieldName"": ""remarks"", ""label"": ""備註"", ""type"": ""STRING"", ""required"": false, ""validation"": { ""maxLength"": 100 } }
+      ]
+    },
+    {
+      ""fieldName"": ""totalCount"",
+      ""label"": ""本次申請人數"",
+      ""type"": ""INTEGER"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""min"": 1, ""max"": 10 }
+    },
+    {
+      ""fieldName"": ""totalAmount"",
+      ""label"": ""應付總金額（元，每人1890元）"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""min"": 0 }
+    }
+  ]
+}
+"	"NEW_EMPLOYEE_POLO_SHIRT_APPLICATION"	1	49
+50	"2026-08-13 11:27:54.716752"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""useDate"",
+      ""label"": ""用車日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 1
+    },
+    {
+      ""fieldName"": ""estimatedTime"",
+      ""label"": ""預估時間"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""dutyLocation"",
+      ""label"": ""出勤地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""reason"",
+      ""label"": ""事由"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""minLength"": 2, ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""passengers"",
+      ""label"": ""乘員"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""minLength"": 2, ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""applicantUnit"",
+      ""label"": ""申請單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""managingUnit"",
+      ""label"": ""管理單位（與申請單位不同時才填）"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""assignedDriver"",
+      ""label"": ""指派司機"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""vehicleNumber"",
+      ""label"": ""車號"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 9,
+      ""validation"": { ""maxLength"": 20 }
+    }
+  ]
+}
+"	"VEHICLE_DISPATCH_APPLICATION"	1	50
+51	"2026-08-13 13:08:47.399375"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""applicantName"",
+      ""label"": ""申請人"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""idNumber"",
+      ""label"": ""身分證字號/統一編號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""servingUnit"",
+      ""label"": ""服務單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""jobTitle"",
+      ""label"": ""職稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""residenceAddress"",
+      ""label"": ""戶籍或經常居住地"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""reason"",
+      ""label"": ""事由"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""minLength"": 2, ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""dependents"",
+      ""label"": ""申請入住之眷屬"",
+      ""type"": ""TABLE"",
+      ""required"": false,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxRows"": 10 },
+      ""columns"": [
+        {
+          ""fieldName"": ""title"",
+          ""label"": ""稱謂"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 20 }
+        },
+        {
+          ""fieldName"": ""name"",
+          ""label"": ""姓名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""idNumber"",
+          ""label"": ""身分證統一編號"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 20 }
+        },
+        {
+          ""fieldName"": ""remarks"",
+          ""label"": ""備註"",
+          ""type"": ""STRING"",
+          ""required"": false,
+          ""validation"": { ""maxLength"": 100 }
+        }
+      ]
+    }
+  ]
+}
+"	"DORMITORY_MOVE_IN_APPLICATION"	1	51
+53	"2026-08-13 16:46:26.781739"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""caseName"",
+      ""label"": ""案名"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contractor"",
+      ""label"": ""承包廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""contractNumber"",
+      ""label"": ""合約字號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""contractDate"",
+      ""label"": ""合約日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4
+    },
+    {
+      ""fieldName"": ""location"",
+      ""label"": ""地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 6
+    },
+    {
+      ""fieldName"": ""contractAmount"",
+      ""label"": ""合約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""performanceBondAmount"",
+      ""label"": ""履保金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""contractPeriod"",
+      ""label"": ""履約期限"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 9,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""actualCompletionDate"",
+      ""label"": ""實際完成日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 10
+    },
+    {
+      ""fieldName"": ""overdueDays"",
+      ""label"": ""逾期日數"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 11,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""overduePenaltyAmount"",
+      ""label"": ""逾期違約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 12,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""totalSettlementAmount"",
+      ""label"": ""結算總款"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 13,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 14,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 15,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"CONTRACT_ACCEPTANCE_REPORT_OVER_500K"	1	53
+54	"2026-08-13 16:46:26.838809"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""caseName"",
+      ""label"": ""案名"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contractor"",
+      ""label"": ""承包廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""contractNumber"",
+      ""label"": ""合約字號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""contractDate"",
+      ""label"": ""合約日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4
+    },
+    {
+      ""fieldName"": ""location"",
+      ""label"": ""地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 6
+    },
+    {
+      ""fieldName"": ""contractAmount"",
+      ""label"": ""合約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""performanceBondAmount"",
+      ""label"": ""履保金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""contractPeriod"",
+      ""label"": ""履約期限"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 9,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""actualCompletionDate"",
+      ""label"": ""實際完成日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 10
+    },
+    {
+      ""fieldName"": ""overdueDays"",
+      ""label"": ""逾期日數"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 11,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""overduePenaltyAmount"",
+      ""label"": ""逾期違約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 12,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""totalSettlementAmount"",
+      ""label"": ""結算總款"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 13,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 14,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 15,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"CONTRACT_ACCEPTANCE_REPORT_UNDER_500K"	1	54
+55	"2026-08-13 16:46:26.886225"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""applicantName"",
+      ""label"": ""申請人"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""nationalId"",
+      ""label"": ""身分證字號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""servingUnit"",
+      ""label"": ""服務單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""jobTitle"",
+      ""label"": ""職稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""moveOutReason"",
+      ""label"": ""退宿事由"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""keyReturned"",
+      ""label"": ""鑰匙已繳回"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""dormCleaned"",
+      ""label"": ""宿舍已清潔"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 8,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""itemsHandedOver"",
+      ""label"": ""物品已點交"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 9,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""remark"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 10,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"DORM_MOVE_OUT_APPLICATION"	1	55
+56	"2026-08-13 16:46:26.958585"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""branchName"",
+      ""label"": ""分行名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""contactEmail"",
+      ""label"": ""聯絡信箱"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""contactAddress"",
+      ""label"": ""聯絡地址"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contactPhone"",
+      ""label"": ""聯絡電話"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""faxNumber"",
+      ""label"": ""傳真號碼"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""envelopeNo45Qty"",
+      ""label"": ""文45號信封數量"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""envelopeNo44Qty"",
+      ""label"": ""文44號信封數量"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 7,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""envelopeNo43Qty"",
+      ""label"": ""文43號信封數量"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""envelopeNo42Qty"",
+      ""label"": ""文42號信封數量"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 9,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""envelopeNo41Qty"",
+      ""label"": ""文41號信封數量"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 10,
+      ""validation"": { ""min"": 0 }
+    }
+  ]
+}
+"	"ENVELOPE_ORDER_FORM"	1	56
+57	"2026-08-13 16:46:27.00683"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""reportingUnit"",
+      ""label"": ""填報單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""inspector"",
+      ""label"": ""檢查人員"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""inspectionDate"",
+      ""label"": ""檢查日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 3
+    },
+    {
+      ""fieldName"": ""inspectionItems"",
+      ""label"": ""檢查項目明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""minRows"": 7, ""maxRows"": 7 },
+      ""columns"": [
+        { ""fieldName"": ""itemName"", ""label"": ""物品名稱"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } },
+        { ""fieldName"": ""specQuantity"", ""label"": ""規格數量"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 30 } },
+        { ""fieldName"": ""result"", ""label"": ""檢查結果（請填「正常」「異常」或「過期」）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 10 } }
+      ]
+    }
+  ]
+}
+"	"FIRST_AID_KIT_CHECK_FORM"	1	57
+58	"2026-08-13 16:46:27.039403"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""departmentName"",
+      ""label"": ""部室名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""changeRoster"",
+      ""label"": ""異動人員清單"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 10 },
+      ""columns"": [
+        { ""fieldName"": ""name"", ""label"": ""姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } },
+        { ""fieldName"": ""changeType"", ""label"": ""異動類型（請填「申請茹素」或「取消茹素」）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } }
+      ]
+    },
+    {
+      ""fieldName"": ""reason"",
+      ""label"": ""申請/取消原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"HQ_LUNCH_MEAL_CHANGE_APPLICATION"	1	58
+59	"2026-08-13 16:46:27.094948"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""branchName"",
+      ""label"": ""分行名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""requisitionerList"",
+      ""label"": ""請領人清單"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 10 },
+      ""columns"": [
+        { ""fieldName"": ""branchCode"", ""label"": ""行代"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""name"", ""label"": ""姓名"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } }
+      ]
+    },
+    {
+      ""fieldName"": ""requisitionDate"",
+      ""label"": ""請領日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 3
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"NEW_MALE_EMPLOYEE_TIE_REQUISITION"	1	59
+60	"2026-08-13 16:46:27.158161"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""caseName"",
+      ""label"": ""案名"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contractor"",
+      ""label"": ""承包廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""contractNumber"",
+      ""label"": ""合約字號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""contractDate"",
+      ""label"": ""合約日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4
+    },
+    {
+      ""fieldName"": ""location"",
+      ""label"": ""地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 6
+    },
+    {
+      ""fieldName"": ""contractAmount"",
+      ""label"": ""合約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""performanceBondAmount"",
+      ""label"": ""履保金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""contractPeriod"",
+      ""label"": ""履約期限"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 9,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""actualCompletionDate"",
+      ""label"": ""實際完成日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 10
+    },
+    {
+      ""fieldName"": ""overdueDays"",
+      ""label"": ""逾期日數"",
+      ""type"": ""INTEGER"",
+      ""required"": false,
+      ""displayOrder"": 11,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""overduePenaltyAmount"",
+      ""label"": ""逾期違約金額"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 12,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""totalSettlementAmount"",
+      ""label"": ""結算總款"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 13,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 14,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 15,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"ONSITE_ACCEPTANCE_REPORT"	1	60
+61	"2026-08-13 16:46:27.203813"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""unitName"",
+      ""label"": ""單位名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""changeRoster"",
+      ""label"": ""異動人員清單"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 10 },
+      ""columns"": [
+        { ""fieldName"": ""account"", ""label"": ""人員帳號"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 50 } },
+        { ""fieldName"": ""identity"", ""label"": ""身分別（請填「經辦人員」或「覆核主管」）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 20 } },
+        { ""fieldName"": ""changeType"", ""label"": ""異動類型（請填「新增」或「刪除」）"", ""type"": ""STRING"", ""required"": true, ""validation"": { ""maxLength"": 10 } }
+      ]
+    }
+  ]
+}
+"	"PRINT_MGMT_ACCOUNT_CHANGE_APPLICATION"	1	61
+62	"2026-08-13 16:46:27.250668"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""acceptanceUnit"",
+      ""label"": ""驗收單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2
+    },
+    {
+      ""fieldName"": ""acceptanceItemDescription"",
+      ""label"": ""驗收項目說明（採購品項與規格）"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 500 }
+    },
+    {
+      ""fieldName"": ""usageStatusAndComment"",
+      ""label"": ""使用情形及意見"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 500 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""paymentDetails"",
+      ""label"": ""付款明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 10 },
+      ""columns"": [
+        {
+          ""fieldName"": ""itemName"",
+          ""label"": ""品名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 100 }
+        },
+        {
+          ""fieldName"": ""amount"",
+          ""label"": ""金額"",
+          ""type"": ""NUMBER"",
+          ""required"": true
+        },
+        {
+          ""fieldName"": ""bankName"",
+          ""label"": ""銀行"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""branchName"",
+          ""label"": ""分行"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""accountName"",
+          ""label"": ""戶名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        }
+      ]
+    }
+  ]
+}
+"	"PROCUREMENT_ACCEPTANCE_REPORT_50K_TO_500K"	1	62
+63	"2026-08-13 16:46:27.298134"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""acceptanceUnit"",
+      ""label"": ""驗收單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2
+    },
+    {
+      ""fieldName"": ""acceptanceItemDescription"",
+      ""label"": ""驗收項目說明（採購品項與規格）"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 500 }
+    },
+    {
+      ""fieldName"": ""usageStatusAndComment"",
+      ""label"": ""使用情形及意見"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 500 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""paymentDetails"",
+      ""label"": ""付款明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 10 },
+      ""columns"": [
+        {
+          ""fieldName"": ""itemName"",
+          ""label"": ""品名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 100 }
+        },
+        {
+          ""fieldName"": ""amount"",
+          ""label"": ""金額"",
+          ""type"": ""NUMBER"",
+          ""required"": true
+        },
+        {
+          ""fieldName"": ""bankName"",
+          ""label"": ""銀行"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""branchName"",
+          ""label"": ""分行"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        },
+        {
+          ""fieldName"": ""accountName"",
+          ""label"": ""戶名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 50 }
+        }
+      ]
+    }
+  ]
+}
+"	"PROCUREMENT_ACCEPTANCE_REPORT_UNDER_50K"	1	63
+64	"2026-08-13 16:46:27.35568"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""requestingUnit"",
+      ""label"": ""請購單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""itemDetails"",
+      ""label"": ""請購品項明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 20 },
+      ""columns"": [
+        {
+          ""fieldName"": ""itemNo"",
+          ""label"": ""項次"",
+          ""type"": ""INTEGER"",
+          ""required"": true
+        },
+        {
+          ""fieldName"": ""itemName"",
+          ""label"": ""請購品名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""請購數量"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1 }
+        },
+        {
+          ""fieldName"": ""unitPrice"",
+          ""label"": ""單價"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""subtotalAmount"",
+          ""label"": ""小計金額"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""purpose"",
+          ""label"": ""用途"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""vendorName"",
+          ""label"": ""廠商名稱"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 100 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""isRelatedPartyTransaction"",
+      ""label"": ""是否屬利害關係人或財報關係人交易"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"PURCHASE_REQUISITION_50K_TO_500K"	1	64
+65	"2026-08-13 16:46:27.426901"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""requestingUnit"",
+      ""label"": ""請購單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""itemDetails"",
+      ""label"": ""請購品項明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 20 },
+      ""columns"": [
+        {
+          ""fieldName"": ""itemNo"",
+          ""label"": ""項次"",
+          ""type"": ""INTEGER"",
+          ""required"": true
+        },
+        {
+          ""fieldName"": ""itemName"",
+          ""label"": ""請購品名"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""請購數量"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1 }
+        },
+        {
+          ""fieldName"": ""unitPrice"",
+          ""label"": ""單價"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""subtotalAmount"",
+          ""label"": ""小計金額"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""purpose"",
+          ""label"": ""用途"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""vendorName"",
+          ""label"": ""廠商名稱"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 100 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""isRelatedPartyTransaction"",
+      ""label"": ""是否屬利害關係人或財報關係人交易"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"PURCHASE_REQUISITION_UNDER_50K"	1	65
+67	"2026-08-13 16:46:27.535607"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""useDate"",
+      ""label"": ""用印日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 1
+    },
+    {
+      ""fieldName"": ""useReason"",
+      ""label"": ""用印事由"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""documentName"",
+      ""label"": ""文件名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""copies"",
+      ""label"": ""份數"",
+      ""type"": ""INTEGER"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""min"": 1 }
+    }
+  ]
+}
+"	"SEAL_USAGE_LOG"	1	67
+68	"2026-08-13 16:46:27.586743"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""acceptanceItem"",
+      ""label"": ""驗收項目"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""contractor"",
+      ""label"": ""承包廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""acceptanceUnit"",
+      ""label"": ""驗收單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4
+    },
+    {
+      ""fieldName"": ""itemDetails"",
+      ""label"": ""品項明細"",
+      ""type"": ""TABLE"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""minRows"": 1, ""maxRows"": 20 },
+      ""columns"": [
+        {
+          ""fieldName"": ""itemNo"",
+          ""label"": ""項次"",
+          ""type"": ""INTEGER"",
+          ""required"": true
+        },
+        {
+          ""fieldName"": ""procurementItem"",
+          ""label"": ""採購項目"",
+          ""type"": ""STRING"",
+          ""required"": true,
+          ""validation"": { ""maxLength"": 200 }
+        },
+        {
+          ""fieldName"": ""quantity"",
+          ""label"": ""數量"",
+          ""type"": ""INTEGER"",
+          ""required"": true,
+          ""validation"": { ""min"": 1 }
+        },
+        {
+          ""fieldName"": ""unitPrice"",
+          ""label"": ""單價"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        },
+        {
+          ""fieldName"": ""amount"",
+          ""label"": ""金額"",
+          ""type"": ""NUMBER"",
+          ""required"": true,
+          ""validation"": { ""min"": 0 }
+        }
+      ]
+    },
+    {
+      ""fieldName"": ""usageStatusAndComment"",
+      ""label"": ""使用情形及意見"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 500 }
+    },
+    {
+      ""fieldName"": ""acceptanceResult"",
+      ""label"": ""驗收結果"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""options"": [""驗收通過"", ""驗收不通過""] }
+    },
+    {
+      ""fieldName"": ""failureReason"",
+      ""label"": ""不通過原因"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"SIMPLIFIED_ACCEPTANCE_REPORT"	1	68
+69	"2026-08-13 16:46:27.630401"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""vehicleNumber"",
+      ""label"": ""車號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""useDate"",
+      ""label"": ""使用日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 2
+    },
+    {
+      ""fieldName"": ""useStartTime"",
+      ""label"": ""使用起始時間（格式：時:分）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 10 }
+    },
+    {
+      ""fieldName"": ""useEndTime"",
+      ""label"": ""使用結束時間（格式：時:分）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 10 }
+    },
+    {
+      ""fieldName"": ""reason"",
+      ""label"": ""事由"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""destination"",
+      ""label"": ""前往地點"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""driverName"",
+      ""label"": ""駕駛人員"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""passengers"",
+      ""label"": ""乘坐人員"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"UNIT_OFFICIAL_VEHICLE_USAGE_LOG"	1	69
+70	"2026-08-13 16:46:27.668056"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""vehicleNumber"",
+      ""label"": ""車號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""usageYear"",
+      ""label"": ""使用年度"",
+      ""type"": ""INTEGER"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""min"": 2020 }
+    },
+    {
+      ""fieldName"": ""usageMonth"",
+      ""label"": ""使用月份"",
+      ""type"": ""INTEGER"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""min"": 1, ""max"": 12 }
+    },
+    {
+      ""fieldName"": ""totalFuelCost"",
+      ""label"": ""加油金額合計"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""remark"",
+      ""label"": ""備註說明"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"VEHICLE_FUEL_USAGE_DETAIL"	1	70
+71	"2026-08-13 16:46:27.731332"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""vehicleNumber"",
+      ""label"": ""車號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""repairVendor"",
+      ""label"": ""保修廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""amount"",
+      ""label"": ""金額"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""acceptancePersonnel"",
+      ""label"": ""驗收人員"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""acceptanceDate"",
+      ""label"": ""驗收日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 5
+    },
+    {
+      ""fieldName"": ""remark"",
+      ""label"": ""備註說明"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"VEHICLE_MAINTENANCE_REPAIR_ACCEPTANCE_REPORT"	1	71
+72	"2026-08-13 16:46:27.802145"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""vehicleNumber"",
+      ""label"": ""車號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""repairVendor"",
+      ""label"": ""保修廠商"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 }
+    },
+    {
+      ""fieldName"": ""applicantName"",
+      ""label"": ""申請人"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""estimatedRepairCost"",
+      ""label"": ""預估保修費用"",
+      ""type"": ""NUMBER"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""accumulatedRepairCost"",
+      ""label"": ""累計保修費用"",
+      ""type"": ""NUMBER"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""min"": 0 }
+    },
+    {
+      ""fieldName"": ""remark"",
+      ""label"": ""備註說明（估價單另行附件於系統附件功能上傳，此欄位供文字補充）"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"VEHICLE_MAINTENANCE_REPAIR_APPLICATION"	1	72
+73	"2026-08-13 16:46:27.867954"	"{
+  ""fields"": [
+    {
+      ""fieldName"": ""meetingName"",
+      ""label"": ""會議名稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 200 }
+    },
+    {
+      ""fieldName"": ""applicantUnit"",
+      ""label"": ""申請單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""startTime"",
+      ""label"": ""會議室起始時間（格式：年/月/日 時:分）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 30 }
+    },
+    {
+      ""fieldName"": ""endTime"",
+      ""label"": ""會議室結束時間（格式：年/月/日 時:分）"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 30 }
+    },
+    {
+      ""fieldName"": ""connectionPoints"",
+      ""label"": ""視訊連接點數"",
+      ""type"": ""INTEGER"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""min"": 1 }
+    },
+    {
+      ""fieldName"": ""systemAdmin"",
+      ""label"": ""視訊系統管理員"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 6,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""adminPhone"",
+      ""label"": ""管理員連絡電話"",
+      ""type"": ""STRING"",
+      ""required"": false,
+      ""displayOrder"": 7,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""remarks"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 8,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"VIDEO_CONFERENCE_SYSTEM_APPLICATION"	1	73
+74	"2026-08-17 05:50:19.43783"	"
+{
+  ""fields"": [
+    {
+      ""fieldName"": ""applicantName"",
+      ""label"": ""申請人"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 1,
+      ""validation"": { ""maxLength"": 50 },
+      ""defaultValueSource"": ""CURRENT_USER_NAME""
+    },
+    {
+      ""fieldName"": ""nationalId"",
+      ""label"": ""身分證字號"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 2,
+      ""validation"": { ""maxLength"": 20 }
+    },
+    {
+      ""fieldName"": ""servingUnit"",
+      ""label"": ""服務單位"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 3,
+      ""validation"": { ""maxLength"": 100 },
+      ""defaultValueSource"": ""CURRENT_USER_SERVICE_UNIT""
+    },
+    {
+      ""fieldName"": ""jobTitle"",
+      ""label"": ""職稱"",
+      ""type"": ""STRING"",
+      ""required"": true,
+      ""displayOrder"": 4,
+      ""validation"": { ""maxLength"": 50 }
+    },
+    {
+      ""fieldName"": ""moveOutReason"",
+      ""label"": ""退宿事由"",
+      ""type"": ""TEXTAREA"",
+      ""required"": true,
+      ""displayOrder"": 5,
+      ""validation"": { ""maxLength"": 300 }
+    },
+    {
+      ""fieldName"": ""applicationDate"",
+      ""label"": ""申請日期"",
+      ""type"": ""DATE"",
+      ""required"": true,
+      ""displayOrder"": 6,
+      ""defaultValueSource"": ""TODAY""
+    },
+    {
+      ""fieldName"": ""keyReturned"",
+      ""label"": ""鑰匙已繳回"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 7,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""dormCleaned"",
+      ""label"": ""宿舍已清潔"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 8,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""itemsHandedOver"",
+      ""label"": ""物品已點交"",
+      ""type"": ""SELECT"",
+      ""required"": true,
+      ""displayOrder"": 9,
+      ""validation"": { ""options"": [""是"", ""否""] }
+    },
+    {
+      ""fieldName"": ""remark"",
+      ""label"": ""備註"",
+      ""type"": ""TEXTAREA"",
+      ""required"": false,
+      ""displayOrder"": 10,
+      ""validation"": { ""maxLength"": 300 }
+    }
+  ]
+}
+"	"DORM_MOVE_OUT_APPLICATION"	2	55
+75	"2026-08-17 14:15:59.739011"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""nationalId"",""label"":""身分證字號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_SERVICE_UNIT""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""moveOutReason"",""label"":""退宿事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":6,""defaultValueSource"":""TODAY""},{""fieldName"":""keyReturned"",""label"":""鑰匙已繳回"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""dormCleaned"",""label"":""宿舍已清潔"",""type"":""SELECT"",""required"":true,""displayOrder"":8,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""itemsHandedOver"",""label"":""物品已點交"",""type"":""SELECT"",""required"":true,""displayOrder"":9,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remark"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":10,""validation"":{""maxLength"":300}}]}"	"DORM_MOVE_OUT_APPLICATION"	3	55
+76	"2026-08-17 14:16:40.141896"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""nationalId"",""label"":""身分證字號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_SERVICE_UNIT""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""moveOutReason"",""label"":""退宿事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":6,""defaultValueSource"":""TODAY""},{""fieldName"":""keyReturned"",""label"":""鑰匙已繳回"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""dormCleaned"",""label"":""宿舍已清潔"",""type"":""SELECT"",""required"":true,""displayOrder"":8,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""itemsHandedOver"",""label"":""物品已點交"",""type"":""SELECT"",""required"":true,""displayOrder"":9,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remark"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":10,""validation"":{""maxLength"":300}}]}"	"DORM_MOVE_OUT_APPLICATION"	4	55
+77	"2026-08-17 14:25:08.293809"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""nationalId"",""label"":""身分證字號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_SERVICE_UNIT""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""moveOutReason"",""label"":""退宿事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":6,""defaultValueSource"":""TODAY""},{""fieldName"":""keyReturned"",""label"":""鑰匙已繳回"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""dormCleaned"",""label"":""宿舍已清潔"",""type"":""SELECT"",""required"":true,""displayOrder"":8,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""itemsHandedOver"",""label"":""物品已點交"",""type"":""SELECT"",""required"":true,""displayOrder"":9,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remark"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":10,""validation"":{""maxLength"":300}}]}"	"DORM_MOVE_OUT_APPLICATION"	5	55
+78	"2026-08-17 15:09:17.789967"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""nationalId"",""label"":""身分證字號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""moveOutReason"",""label"":""退宿事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":6,""defaultValueSource"":""TODAY""},{""fieldName"":""keyReturned"",""label"":""鑰匙已繳回"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""dormCleaned"",""label"":""宿舍已清潔"",""type"":""SELECT"",""required"":true,""displayOrder"":8,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""itemsHandedOver"",""label"":""物品已點交"",""type"":""SELECT"",""required"":true,""displayOrder"":9,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remark"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":10,""validation"":{""maxLength"":300}}]}"	"DORM_MOVE_OUT_APPLICATION"	6	55
+79	"2026-08-17 15:09:18.183967"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50}},{""fieldName"":""idNumber"",""label"":""身分證字號/統一編號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""residenceAddress"",""label"":""戶籍或經常居住地"",""type"":""STRING"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":200}},{""fieldName"":""reason"",""label"":""事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":6,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""dependents"",""label"":""申請入住之眷屬"",""type"":""TABLE"",""required"":false,""displayOrder"":7,""validation"":{""maxRows"":10},""columns"":[{""fieldName"":""title"",""label"":""稱謂"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""idNumber"",""label"":""身分證統一編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]}]}"	"DORMITORY_MOVE_IN_APPLICATION"	2	51
+80	"2026-08-17 15:09:18.499537"	"{""fields"":[{""fieldName"":""branchName"",""label"":""分行名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""contactEmail"",""label"":""聯絡信箱"",""type"":""STRING"",""required"":false,""displayOrder"":2,""validation"":{""maxLength"":100}},{""fieldName"":""contactAddress"",""label"":""聯絡地址"",""type"":""STRING"",""required"":false,""displayOrder"":3,""validation"":{""maxLength"":200}},{""fieldName"":""contactPhone"",""label"":""聯絡電話"",""type"":""STRING"",""required"":false,""displayOrder"":4,""validation"":{""maxLength"":20}},{""fieldName"":""faxNumber"",""label"":""傳真號碼"",""type"":""STRING"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":20}},{""fieldName"":""envelopeNo45Qty"",""label"":""文45號信封數量"",""type"":""INTEGER"",""required"":false,""displayOrder"":6,""validation"":{""min"":0}},{""fieldName"":""envelopeNo44Qty"",""label"":""文44號信封數量"",""type"":""INTEGER"",""required"":false,""displayOrder"":7,""validation"":{""min"":0}},{""fieldName"":""envelopeNo43Qty"",""label"":""文43號信封數量"",""type"":""INTEGER"",""required"":false,""displayOrder"":8,""validation"":{""min"":0}},{""fieldName"":""envelopeNo42Qty"",""label"":""文42號信封數量"",""type"":""INTEGER"",""required"":false,""displayOrder"":9,""validation"":{""min"":0}},{""fieldName"":""envelopeNo41Qty"",""label"":""文41號信封數量"",""type"":""INTEGER"",""required"":false,""displayOrder"":10,""validation"":{""min"":0}}]}"	"ENVELOPE_ORDER_FORM"	2	56
+81	"2026-08-17 15:09:18.824785"	"{""fields"":[{""fieldName"":""reportingUnit"",""label"":""填報單位"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""inspector"",""label"":""檢查人員"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""inspectionDate"",""label"":""檢查日期"",""type"":""DATE"",""required"":true,""displayOrder"":3},{""fieldName"":""inspectionItems"",""label"":""檢查項目明細"",""type"":""TABLE"",""required"":true,""displayOrder"":4,""validation"":{""minRows"":7,""maxRows"":7},""columns"":[{""fieldName"":""itemName"",""label"":""物品名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""specQuantity"",""label"":""規格數量"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":30}},{""fieldName"":""result"",""label"":""檢查結果（請填「正常」「異常」或「過期」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}}]}]}"	"FIRST_AID_KIT_CHECK_FORM"	2	57
+82	"2026-08-17 15:09:19.150771"	"{""fields"":[{""fieldName"":""branchName"",""label"":""分行名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""requisitionerList"",""label"":""請領人清單"",""type"":""TABLE"",""required"":true,""displayOrder"":2,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""branchCode"",""label"":""行代"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]},{""fieldName"":""requisitionDate"",""label"":""請領日期"",""type"":""DATE"",""required"":true,""displayOrder"":3},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":4,""validation"":{""maxLength"":300}}]}"	"NEW_MALE_EMPLOYEE_TIE_REQUISITION"	2	59
+83	"2026-08-17 15:52:15.692258"	"{""fields"":[{""fieldName"":""unitName"",""label"":""部室/區域中心/分行"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""destructionItems"",""label"":""報毀檔案清冊"",""type"":""TABLE"",""required"":true,""displayOrder"":2,""validation"":{""minRows"":1,""maxRows"":50},""columns"":[{""fieldName"":""fileName"",""label"":""檔案名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""retentionPeriod"",""label"":""起迄年度期間"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""quantity"",""label"":""數量"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1}},{""fieldName"":""unit"",""label"":""單位"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""responsibleDepartment"",""label"":""主管部室"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""reviewComment"",""label"":""會核意見"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":200}}]},{""fieldName"":""destructionDateTime"",""label"":""銷毀日期及時間"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":50}},{""fieldName"":""destructionLocation"",""label"":""銷毀地點"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":100}},{""fieldName"":""destructionMethod"",""label"":""銷毀方式"",""type"":""STRING"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":100}},{""fieldName"":""supervisorPersonnel"",""label"":""監毀人員"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":50}}]}"	"FILE_DESTRUCTION_APPROVAL_REGISTER"	2	44
+84	"2026-08-17 15:52:16.039146"	"{""fields"":[{""fieldName"":""unitName"",""label"":""部室/區域中心/分行"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""fileNumber"",""label"":""檔案號碼"",""type"":""STRING"",""required"":false,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""destructionItems"",""label"":""報毀檔案清冊"",""type"":""TABLE"",""required"":true,""displayOrder"":3,""validation"":{""minRows"":1,""maxRows"":50},""columns"":[{""fieldName"":""fileName"",""label"":""檔案名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""retentionYears"",""label"":""保存年限（年）"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""fileYear"",""label"":""檔案年度"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""quantity"",""label"":""數量（卷）"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1}}]},{""fieldName"":""destructionDateTime"",""label"":""銷毀日期及時間"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""destructionLocation"",""label"":""銷毀地點"",""type"":""STRING"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":100}},{""fieldName"":""destructionMethod"",""label"":""銷毀方式"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":100}},{""fieldName"":""supervisorPersonnel"",""label"":""監毀人員"",""type"":""STRING"",""required"":true,""displayOrder"":7,""validation"":{""maxLength"":50}}]}"	"FILE_RETENTION_EXPIRED_DESTRUCTION_REGISTER"	2	45
+85	"2026-08-17 15:52:16.327786"	"{""fields"":[{""fieldName"":""departmentName"",""label"":""部室名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""changeRoster"",""label"":""異動人員清單"",""type"":""TABLE"",""required"":true,""displayOrder"":2,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""changeType"",""label"":""異動類型（請填「申請茹素」或「取消茹素」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}}]},{""fieldName"":""reason"",""label"":""申請/取消原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":3,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":4,""defaultValueSource"":""TODAY""},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}}]}"	"HQ_LUNCH_MEAL_CHANGE_APPLICATION"	2	58
+86	"2026-08-17 15:52:16.625612"	"{""fields"":[{""fieldName"":""unitCode"",""label"":""單位代號/名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""maleRoster"",""label"":""男性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":3,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""femaleRoster"",""label"":""女性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""totalCount"",""label"":""本次申請人數"",""type"":""INTEGER"",""required"":true,""displayOrder"":5,""validation"":{""min"":1,""max"":10}},{""fieldName"":""totalAmount"",""label"":""應付總金額（元，每人1890元）"",""type"":""NUMBER"",""required"":true,""displayOrder"":6,""validation"":{""min"":0}}]}"	"NEW_EMPLOYEE_POLO_SHIRT_APPLICATION"	2	49
+87	"2026-08-17 15:52:16.927555"	"{""fields"":[{""fieldName"":""unitName"",""label"":""單位名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""changeRoster"",""label"":""異動人員清單"",""type"":""TABLE"",""required"":true,""displayOrder"":3,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""account"",""label"":""人員帳號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""identity"",""label"":""身分別（請填「經辦人員」或「覆核主管」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""changeType"",""label"":""異動類型（請填「新增」或「刪除」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}}]}]}"	"PRINT_MGMT_ACCOUNT_CHANGE_APPLICATION"	2	61
+88	"2026-08-17 15:52:17.214807"	"{""fields"":[{""fieldName"":""acceptanceUnit"",""label"":""驗收單位"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""acceptanceDate"",""label"":""驗收日期"",""type"":""DATE"",""required"":true,""displayOrder"":2},{""fieldName"":""acceptanceItemDescription"",""label"":""驗收項目說明（採購品項與規格）"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":500}},{""fieldName"":""usageStatusAndComment"",""label"":""使用情形及意見"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":4,""validation"":{""maxLength"":500}},{""fieldName"":""acceptanceResult"",""label"":""驗收結果"",""type"":""SELECT"",""required"":true,""displayOrder"":5,""validation"":{""options"":[""驗收通過"",""驗收不通過""]}},{""fieldName"":""failureReason"",""label"":""不通過原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":6,""validation"":{""maxLength"":300}},{""fieldName"":""paymentDetails"",""label"":""付款明細"",""type"":""TABLE"",""required"":true,""displayOrder"":7,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""itemName"",""label"":""品名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":100}},{""fieldName"":""amount"",""label"":""金額"",""type"":""NUMBER"",""required"":true},{""fieldName"":""bankName"",""label"":""銀行"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""branchName"",""label"":""分行"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""accountName"",""label"":""戶名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]}]}"	"PROCUREMENT_ACCEPTANCE_REPORT_50K_TO_500K"	2	62
+89	"2026-08-17 15:52:17.499226"	"{""fields"":[{""fieldName"":""acceptanceUnit"",""label"":""驗收單位"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""acceptanceDate"",""label"":""驗收日期"",""type"":""DATE"",""required"":true,""displayOrder"":2},{""fieldName"":""acceptanceItemDescription"",""label"":""驗收項目說明（採購品項與規格）"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":500}},{""fieldName"":""usageStatusAndComment"",""label"":""使用情形及意見"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":4,""validation"":{""maxLength"":500}},{""fieldName"":""acceptanceResult"",""label"":""驗收結果"",""type"":""SELECT"",""required"":true,""displayOrder"":5,""validation"":{""options"":[""驗收通過"",""驗收不通過""]}},{""fieldName"":""failureReason"",""label"":""不通過原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":6,""validation"":{""maxLength"":300}},{""fieldName"":""paymentDetails"",""label"":""付款明細"",""type"":""TABLE"",""required"":true,""displayOrder"":7,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""itemName"",""label"":""品名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":100}},{""fieldName"":""amount"",""label"":""金額"",""type"":""NUMBER"",""required"":true},{""fieldName"":""bankName"",""label"":""銀行"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""branchName"",""label"":""分行"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""accountName"",""label"":""戶名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]}]}"	"PROCUREMENT_ACCEPTANCE_REPORT_UNDER_50K"	2	63
+90	"2026-08-17 15:52:17.794964"	"{""fields"":[{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":1,""defaultValueSource"":""TODAY""},{""fieldName"":""requestingUnit"",""label"":""請購單位"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""itemDetails"",""label"":""請購品項明細"",""type"":""TABLE"",""required"":true,""displayOrder"":3,""validation"":{""minRows"":1,""maxRows"":20},""columns"":[{""fieldName"":""itemNo"",""label"":""項次"",""type"":""INTEGER"",""required"":true},{""fieldName"":""itemName"",""label"":""請購品名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""quantity"",""label"":""請購數量"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1}},{""fieldName"":""unitPrice"",""label"":""單價"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""subtotalAmount"",""label"":""小計金額"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""purpose"",""label"":""用途"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""vendorName"",""label"":""廠商名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":100}}]},{""fieldName"":""isRelatedPartyTransaction"",""label"":""是否屬利害關係人或財報關係人交易"",""type"":""SELECT"",""required"":true,""displayOrder"":4,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}}]}"	"PURCHASE_REQUISITION_UNDER_50K"	2	65
+91	"2026-08-17 15:52:18.099172"	"{""fields"":[{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":1,""defaultValueSource"":""TODAY""},{""fieldName"":""requestingUnit"",""label"":""請購單位"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""itemDetails"",""label"":""請購品項明細"",""type"":""TABLE"",""required"":true,""displayOrder"":3,""validation"":{""minRows"":1,""maxRows"":20},""columns"":[{""fieldName"":""itemNo"",""label"":""項次"",""type"":""INTEGER"",""required"":true},{""fieldName"":""itemName"",""label"":""請購品名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""quantity"",""label"":""請購數量"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1}},{""fieldName"":""unitPrice"",""label"":""單價"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""subtotalAmount"",""label"":""小計金額"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""purpose"",""label"":""用途"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""vendorName"",""label"":""廠商名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":100}}]},{""fieldName"":""isRelatedPartyTransaction"",""label"":""是否屬利害關係人或財報關係人交易"",""type"":""SELECT"",""required"":true,""displayOrder"":4,""validation"":{""options"":[""是"",""否""]}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}}]}"	"PURCHASE_REQUISITION_50K_TO_500K"	2	64
+92	"2026-08-17 15:52:18.424777"	"{""fields"":[{""fieldName"":""acceptanceItem"",""label"":""驗收項目"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":200}},{""fieldName"":""contractor"",""label"":""承包廠商"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100}},{""fieldName"":""acceptanceUnit"",""label"":""驗收單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""acceptanceDate"",""label"":""驗收日期"",""type"":""DATE"",""required"":true,""displayOrder"":4},{""fieldName"":""itemDetails"",""label"":""品項明細"",""type"":""TABLE"",""required"":true,""displayOrder"":5,""validation"":{""minRows"":1,""maxRows"":20},""columns"":[{""fieldName"":""itemNo"",""label"":""項次"",""type"":""INTEGER"",""required"":true},{""fieldName"":""procurementItem"",""label"":""採購項目"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""quantity"",""label"":""數量"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1}},{""fieldName"":""unitPrice"",""label"":""單價"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}},{""fieldName"":""amount"",""label"":""金額"",""type"":""NUMBER"",""required"":true,""validation"":{""min"":0}}]},{""fieldName"":""usageStatusAndComment"",""label"":""使用情形及意見"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":6,""validation"":{""maxLength"":500}},{""fieldName"":""acceptanceResult"",""label"":""驗收結果"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""驗收通過"",""驗收不通過""]}},{""fieldName"":""failureReason"",""label"":""不通過原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":300}}]}"	"SIMPLIFIED_ACCEPTANCE_REPORT"	2	68
+93	"2026-08-17 15:52:18.708439"	"{""fields"":[{""fieldName"":""useDate"",""label"":""用車日期"",""type"":""DATE"",""required"":true,""displayOrder"":1},{""fieldName"":""estimatedTime"",""label"":""預估時間"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""dutyLocation"",""label"":""出勤地點"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100}},{""fieldName"":""reason"",""label"":""事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":4,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""passengers"",""label"":""乘員"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""applicantUnit"",""label"":""申請單位"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""managingUnit"",""label"":""管理單位（與申請單位不同時才填）"",""type"":""STRING"",""required"":false,""displayOrder"":7,""validation"":{""maxLength"":100}},{""fieldName"":""assignedDriver"",""label"":""指派司機"",""type"":""STRING"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":50}},{""fieldName"":""vehicleNumber"",""label"":""車號"",""type"":""STRING"",""required"":false,""displayOrder"":9,""validation"":{""maxLength"":20}}]}"	"VEHICLE_DISPATCH_APPLICATION"	2	50
+94	"2026-08-17 15:52:19.001859"	"{""fields"":[{""fieldName"":""meetingName"",""label"":""會議名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":200}},{""fieldName"":""applicantUnit"",""label"":""申請單位"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""startTime"",""label"":""會議室起始時間（格式：年/月/日 時:分）"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":30}},{""fieldName"":""endTime"",""label"":""會議室結束時間（格式：年/月/日 時:分）"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":30}},{""fieldName"":""connectionPoints"",""label"":""視訊連接點數"",""type"":""INTEGER"",""required"":true,""displayOrder"":5,""validation"":{""min"":1}},{""fieldName"":""systemAdmin"",""label"":""視訊系統管理員"",""type"":""STRING"",""required"":false,""displayOrder"":6,""validation"":{""maxLength"":50}},{""fieldName"":""adminPhone"",""label"":""管理員連絡電話"",""type"":""STRING"",""required"":false,""displayOrder"":7,""validation"":{""maxLength"":20}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":300}}]}"	"VIDEO_CONFERENCE_SYSTEM_APPLICATION"	2	73
+95	"2026-08-17 16:02:11.388898"	"{""fields"":[{""fieldName"":""reportingUnit"",""label"":""填報單位（分行/部）"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""reportDate"",""label"":""填報日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""firstAidPersonnel"",""label"":""急救人員名單"",""type"":""TABLE"",""required"":false,""displayOrder"":3,""validation"":{""maxRows"":20},""columns"":[{""fieldName"":""employeeId"",""label"":""行員代號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]},{""fieldName"":""firePreventionPersonnel"",""label"":""防火管理人員名單"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""maxRows"":20},""columns"":[{""fieldName"":""employeeId"",""label"":""行員代號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]},{""fieldName"":""safetyOfficerPersonnel"",""label"":""職業安全衛生業務主管名單"",""type"":""TABLE"",""required"":false,""displayOrder"":5,""validation"":{""maxRows"":20},""columns"":[{""fieldName"":""employeeId"",""label"":""行員代號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}}]},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":6,""validation"":{""maxLength"":300}}]}"	"SAFETY_TRAINING_DESIGNATION_ROSTER"	2	47
+96	"2026-08-17 16:02:11.626062"	"{""fields"":[{""fieldName"":""orderingUnit"",""label"":""訂購單位（分行/部門）"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""orderDate"",""label"":""訂購日期"",""type"":""DATE"",""required"":true,""displayOrder"":2},{""fieldName"":""deliveryAddress"",""label"":""收貨地址"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":200}},{""fieldName"":""contactPhone"",""label"":""連絡電話"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":20}},{""fieldName"":""extension"",""label"":""分機"",""type"":""STRING"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":10}},{""fieldName"":""contactPerson"",""label"":""聯絡人"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":50}},{""fieldName"":""orderItems"",""label"":""訂購明細"",""type"":""TABLE"",""required"":true,""displayOrder"":7,""validation"":{""minRows"":1,""maxRows"":20},""columns"":[{""fieldName"":""style"",""label"":""款式（男款短袖32TAB10614E $455／男款長袖32TAB10714E $490／女款短袖32TAB30614E $455／女款長袖32TAB30714E $490）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":30}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2XL/3XL/4XL/5XL）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""quantity"",""label"":""數量"",""type"":""INTEGER"",""required"":true,""validation"":{""min"":1,""max"":20}}]},{""fieldName"":""totalAmount"",""label"":""訂購總金額（元）"",""type"":""NUMBER"",""required"":true,""displayOrder"":8,""validation"":{""min"":0}},{""fieldName"":""remarks"",""label"":""其他備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":9,""validation"":{""maxLength"":300}}]}"	"POLO_SHIRT_SELF_PAY_ORDER"	2	48
+97	"2026-08-17 16:24:49.706045"	"{""fields"":[{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""idNumber"",""label"":""身分證字號/統一編號"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":20}},{""fieldName"":""servingUnit"",""label"":""服務單位"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""jobTitle"",""label"":""職稱"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""residenceAddress"",""label"":""戶籍或經常居住地"",""type"":""STRING"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":200}},{""fieldName"":""reason"",""label"":""事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":6,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""dependents"",""label"":""申請入住之眷屬"",""type"":""TABLE"",""required"":false,""displayOrder"":7,""validation"":{""maxRows"":10},""columns"":[{""fieldName"":""title"",""label"":""稱謂"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""idNumber"",""label"":""身分證統一編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]}]}"	"DORMITORY_MOVE_IN_APPLICATION"	3	51
+98	"2026-08-17 16:24:49.94603"	"{""fields"":[{""fieldName"":""vehicleNumber"",""label"":""車號"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":20}},{""fieldName"":""repairVendor"",""label"":""保修廠商"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100}},{""fieldName"":""applicantName"",""label"":""申請人"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":50},""defaultValueSource"":""CURRENT_USER_NAME""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":4,""defaultValueSource"":""TODAY""},{""fieldName"":""estimatedRepairCost"",""label"":""預估保修費用"",""type"":""NUMBER"",""required"":true,""displayOrder"":5,""validation"":{""min"":0}},{""fieldName"":""accumulatedRepairCost"",""label"":""累計保修費用"",""type"":""NUMBER"",""required"":false,""displayOrder"":6,""validation"":{""min"":0}},{""fieldName"":""remark"",""label"":""備註說明（估價單另行附件於系統附件功能上傳，此欄位供文字補充）"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":7,""validation"":{""maxLength"":300}}]}"	"VEHICLE_MAINTENANCE_REPAIR_APPLICATION"	2	72
+99	"2026-08-18 15:29:03.146419"	"{""fields"":[{""fieldName"":""reportingUnit"",""label"":""填報單位"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""inspector"",""label"":""檢查人員"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""inspectionDate"",""label"":""檢查日期"",""type"":""DATE"",""required"":true,""displayOrder"":3},{""fieldName"":""inspectionItems"",""label"":""檢查項目明細"",""type"":""TABLE"",""required"":true,""displayOrder"":4,""validation"":{""minRows"":1,""maxRows"":7},""columns"":[{""fieldName"":""itemName"",""label"":""物品名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""specQuantity"",""label"":""規格數量"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":30}},{""fieldName"":""result"",""label"":""檢查結果（請填「正常」「異常」或「過期」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}}]}]}"	"FIRST_AID_KIT_CHECK_FORM"	3	57
+100	"2026-09-09 14:14:45.138857"	"{""fields"":[{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":1,""defaultValueSource"":""TODAY""},{""fieldName"":""applicationType"",""label"":""申請項目"",""type"":""SELECT"",""required"":true,""displayOrder"":2,""validation"":{""options"":[""手機設備"",""手機門號""]}},{""fieldName"":""applicationReason"",""label"":""申請事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":300}},{""fieldName"":""custodian"",""label"":""保管人"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":50}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}}]}"	"MOBILE_PHONE_EQUIPMENT_APPLICATION"	1	74
+101	"2026-09-09 14:14:45.29458"	"{""fields"":[{""fieldName"":""applicantUnit"",""label"":""申請分行/部室"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""footageStartDate"",""label"":""調閱影像起始日期"",""type"":""DATE"",""required"":true,""displayOrder"":3},{""fieldName"":""footageStartTime"",""label"":""調閱影像起始時間（HH:MM）"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":5,""pattern"":""^([01][0-9]|2[0-3]):[0-5][0-9]$""}},{""fieldName"":""footageEndDate"",""label"":""調閱影像結束日期"",""type"":""DATE"",""required"":true,""displayOrder"":5},{""fieldName"":""footageEndTime"",""label"":""調閱影像結束時間（HH:MM）"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":5,""pattern"":""^([01][0-9]|2[0-3]):[0-5][0-9]$""}},{""fieldName"":""applicationReason"",""label"":""申請事由"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""調閱出勤紀錄影像（含識別證毀損、遺失等更換識別證等事由）"",""主管機關/董事會稽核室調閱影像"",""警察機關調閱影像（需有正式函文敘明調閱原因）"",""其他事由""]}},{""fieldName"":""reasonDetail"",""label"":""事由詳述（選擇「其他事由」時請填寫）"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":300}},{""fieldName"":""coApprovingManager"",""label"":""會同主管（申請人與會同主管不得為同一人）"",""type"":""STRING"",""required"":false,""displayOrder"":9,""validation"":{""maxLength"":50}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":10,""validation"":{""maxLength"":300}}]}"	"SURVEILLANCE_FOOTAGE_RETRIEVAL_APPLICATION"	1	75
+102	"2026-09-09 14:14:45.378379"	"{""fields"":[{""fieldName"":""unitName"",""label"":""單位名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""inventoryDate"",""label"":""盤點日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""inventoryResult"",""label"":""盤點結果"",""type"":""SELECT"",""required"":true,""displayOrder"":3,""validation"":{""options"":[""盤點完成無需報廢"",""盤點完成需報廢""]}},{""fieldName"":""disposalItems"",""label"":""報廢財產清冊（盤點結果為「需報廢」時填寫；財產設備相片請於送出後於附件上傳）"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""minRows"":0,""maxRows"":50},""columns"":[{""fieldName"":""propertyNumber"",""label"":""財產編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""propertyName"",""label"":""財產名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":100}},{""fieldName"":""damageCondition"",""label"":""財產設備損壞情形"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""disposalMethod"",""label"":""財產設備處分方式"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":200}},{""fieldName"":""belowUsefulLife"",""label"":""是否未達耐用年限（是/否）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}}]}]}"	"PROPERTY_INVENTORY_DISPOSAL_REGISTER"	1	76
+103	"2026-09-09 14:14:45.470752"	"{""fields"":[{""fieldName"":""branchName"",""label"":""分行別"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""maintenanceDate"",""label"":""日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""maintenanceContractor"",""label"":""保養廠商"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100}},{""fieldName"":""checkMonitorDisplay"",""label"":""監錄主機螢幕顯示是否正常"",""type"":""SELECT"",""required"":true,""displayOrder"":4,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkKeyboardMouseSwitch"",""label"":""主機鍵盤滑鼠及切換器動作是否正常"",""type"":""SELECT"",""required"":true,""displayOrder"":5,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkCameraPositionLabel"",""label"":""各攝影機畫面標註拍攝位置資料是否正確（會同分行人員確認）"",""type"":""SELECT"",""required"":true,""displayOrder"":6,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkPlayback"",""label"":""錄影資料回放是否正常"",""type"":""SELECT"",""required"":true,""displayOrder"":7,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkDiskSpace"",""label"":""主機硬碟空間是否充足"",""type"":""SELECT"",""required"":true,""displayOrder"":8,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkImageClarity"",""label"":""攝影機影像是否清晰"",""type"":""SELECT"",""required"":true,""displayOrder"":9,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""checkCameraAngle"",""label"":""攝影機拍攝角度是否適當（有無偏移）"",""type"":""SELECT"",""required"":true,""displayOrder"":10,""validation"":{""options"":[""正常"",""異常""]}},{""fieldName"":""abnormalHandling"",""label"":""異常處理情形"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":11,""validation"":{""maxLength"":500}},{""fieldName"":""maintenancePersonnel"",""label"":""維修人員"",""type"":""STRING"",""required"":true,""displayOrder"":12,""validation"":{""maxLength"":50}}]}"	"SURVEILLANCE_EQUIPMENT_MAINTENANCE_RECORD"	1	77
+105	"2026-09-10 11:18:40.459048"	"{""fields"":[{""fieldName"":""useDate"",""label"":""用車日期"",""type"":""DATE"",""required"":true,""displayOrder"":1},{""fieldName"":""estimatedTime"",""label"":""預估時間"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""dutyLocation"",""label"":""出勤地點"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100}},{""fieldName"":""reason"",""label"":""事由"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":4,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""passengers"",""label"":""乘員"",""type"":""TEXTAREA"",""required"":true,""displayOrder"":5,""validation"":{""minLength"":2,""maxLength"":300}},{""fieldName"":""applicantUnit"",""label"":""申請單位"",""type"":""STRING"",""required"":true,""displayOrder"":6,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""managingUnit"",""label"":""管理單位（與申請單位不同時才填）"",""type"":""STRING"",""required"":false,""displayOrder"":7,""validation"":{""maxLength"":100}},{""fieldName"":""assignedDriver"",""label"":""指派司機"",""type"":""STRING"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":50},""editableAtApproverType"":""TOP_LEVEL_DEPT"",""editableAtApproverCode"":""B""},{""fieldName"":""vehicleNumber"",""label"":""車號"",""type"":""STRING"",""required"":false,""displayOrder"":9,""validation"":{""maxLength"":20},""editableAtApproverType"":""TOP_LEVEL_DEPT"",""editableAtApproverCode"":""B""}]}"	"VEHICLE_DISPATCH_APPLICATION"	3	50
+106	"2026-09-10 11:36:45.472363"	"{""fields"":[{""fieldName"":""meetingName"",""label"":""會議名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":200}},{""fieldName"":""applicantUnit"",""label"":""申請單位"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""meetingRoomLocation"",""label"":""申請會議室位置"",""type"":""STRING"",""required"":true,""displayOrder"":3,""validation"":{""maxLength"":100}},{""fieldName"":""startTime"",""label"":""會議室起始時間（格式：年/月/日 時:分）"",""type"":""STRING"",""required"":true,""displayOrder"":4,""validation"":{""maxLength"":30}},{""fieldName"":""endTime"",""label"":""會議室結束時間（格式：年/月/日 時:分）"",""type"":""STRING"",""required"":true,""displayOrder"":5,""validation"":{""maxLength"":30}},{""fieldName"":""connectionPoints"",""label"":""視訊連接點數"",""type"":""INTEGER"",""required"":true,""displayOrder"":6,""validation"":{""min"":1}},{""fieldName"":""systemAdmin"",""label"":""視訊系統管理員"",""type"":""STRING"",""required"":false,""displayOrder"":7,""validation"":{""maxLength"":50}},{""fieldName"":""adminPhone"",""label"":""管理員連絡電話"",""type"":""STRING"",""required"":false,""displayOrder"":8,""validation"":{""maxLength"":20}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":9,""validation"":{""maxLength"":300}}]}"	"VIDEO_CONFERENCE_SYSTEM_APPLICATION"	3	73
+107	"2026-09-10 11:48:34.478456"	"{""fields"":[{""fieldName"":""departmentName"",""label"":""部室名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""changeRoster"",""label"":""異動人員清單"",""type"":""TABLE"",""required"":true,""displayOrder"":2,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""changeType"",""label"":""異動類型（請填「申請茹素」或「取消茹素」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}}]},{""fieldName"":""reason"",""label"":""申請/取消原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":3,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":4,""defaultValueSource"":""TODAY""},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""effectiveDate"",""label"":""生效日期"",""type"":""DATE"",""required"":false,""displayOrder"":6,""editableAtApproverType"":""TOP_LEVEL_DEPT"",""editableAtApproverCode"":""B""}]}"	"HQ_LUNCH_MEAL_CHANGE_APPLICATION"	3	58
+108	"2026-09-10 12:01:08.754187"	"{""fields"":[{""fieldName"":""departmentName"",""label"":""部室名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""changeRoster"",""label"":""異動人員清單"",""type"":""TABLE"",""required"":true,""displayOrder"":2,""validation"":{""minRows"":1,""maxRows"":10},""columns"":[{""fieldName"":""name"",""label"":""姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""changeType"",""label"":""異動類型（請填「申請茹素」或「取消茹素」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}}]},{""fieldName"":""reason"",""label"":""申請/取消原因"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":3,""validation"":{""maxLength"":300}},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":4,""defaultValueSource"":""TODAY""},{""fieldName"":""remarks"",""label"":""備註"",""type"":""TEXTAREA"",""required"":false,""displayOrder"":5,""validation"":{""maxLength"":300}},{""fieldName"":""effectiveDate"",""label"":""生效日期"",""type"":""DATE"",""required"":false,""displayOrder"":6,""editableAtApproverType"":""TOP_LEVEL_DEPT"",""editableAtApproverCode"":""B""},{""fieldName"":""effectiveDateNotice"",""label"":""嗣後如欲變更異動需滿一年後另提出申請，申請需經總務部同意後始得變更，惟申請滿一年以上之異動者，申請異動以二次為限。"",""type"":""STATIC_TEXT"",""required"":false,""displayOrder"":7}]}"	"HQ_LUNCH_MEAL_CHANGE_APPLICATION"	4	58
+109	"2026-09-10 13:16:14.516348"	"{""fields"":[{""fieldName"":""unitCode"",""label"":""單位代號/名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""maleRoster"",""label"":""男性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":3,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L/6L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""femaleRoster"",""label"":""女性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""totalCount"",""label"":""本次申請人數"",""type"":""INTEGER"",""required"":true,""displayOrder"":5,""validation"":{""min"":1,""max"":10}},{""fieldName"":""totalAmount"",""label"":""應付總金額（元，每人1890元）"",""type"":""NUMBER"",""required"":true,""displayOrder"":6,""validation"":{""min"":0}}]}"	"NEW_EMPLOYEE_POLO_SHIRT_APPLICATION"	3	49
+110	"2026-09-10 13:23:03.847436"	"{""fields"":[{""fieldName"":""unitCode"",""label"":""單位代號/名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""maleRoster"",""label"":""男性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":3,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L/6L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""femaleRoster"",""label"":""女性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""totalCount"",""label"":""本次申請人數"",""type"":""INTEGER"",""required"":true,""displayOrder"":5,""validation"":{""min"":1,""max"":10}},{""fieldName"":""totalAmount"",""label"":""應付總金額（元）"",""type"":""NUMBER"",""required"":true,""displayOrder"":6,""validation"":{""min"":0}}]}"	"NEW_EMPLOYEE_POLO_SHIRT_APPLICATION"	4	49
+111	"2026-09-10 13:30:39.057213"	"{""fields"":[{""fieldName"":""unitCode"",""label"":""單位代號/名稱"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""applicationDate"",""label"":""申請日期"",""type"":""DATE"",""required"":true,""displayOrder"":2,""defaultValueSource"":""TODAY""},{""fieldName"":""maleRoster"",""label"":""男性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":3,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L/6L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""femaleRoster"",""label"":""女性申請名單"",""type"":""TABLE"",""required"":false,""displayOrder"":4,""validation"":{""maxRows"":5},""columns"":[{""fieldName"":""employeeId"",""label"":""行員編號"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":20}},{""fieldName"":""name"",""label"":""行員姓名"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""size"",""label"":""尺寸（S/M/L/XL/2L/3L/4L/5L）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}},{""fieldName"":""remarks"",""label"":""備註"",""type"":""STRING"",""required"":false,""validation"":{""maxLength"":100}}]},{""fieldName"":""totalCount"",""label"":""本次申請人數"",""type"":""INTEGER"",""required"":true,""displayOrder"":5},{""fieldName"":""totalAmount"",""label"":""應付總金額（元）"",""type"":""NUMBER"",""required"":true,""displayOrder"":6,""validation"":{""min"":0}}]}"	"NEW_EMPLOYEE_POLO_SHIRT_APPLICATION"	5	49
+112	"2026-09-10 13:58:10.695636"	"{""fields"":[{""fieldName"":""reportingUnit"",""label"":""填報單位"",""type"":""STRING"",""required"":true,""displayOrder"":1,""validation"":{""maxLength"":100},""defaultValueSource"":""CURRENT_USER_UNIT_LABEL""},{""fieldName"":""inspector"",""label"":""檢查人員"",""type"":""STRING"",""required"":true,""displayOrder"":2,""validation"":{""maxLength"":50}},{""fieldName"":""inspectionDate"",""label"":""檢查日期"",""type"":""DATE"",""required"":true,""displayOrder"":3},{""fieldName"":""inspectionItems"",""label"":""檢查項目明細"",""type"":""TABLE"",""required"":true,""displayOrder"":4,""validation"":{""minRows"":1,""maxRows"":7},""columns"":[{""fieldName"":""itemName"",""label"":""物品名稱"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":50}},{""fieldName"":""specQuantity"",""label"":""規格數量"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":30}},{""fieldName"":""result"",""label"":""檢查結果（請填「正常」「異常」或「過期」）"",""type"":""STRING"",""required"":true,""validation"":{""maxLength"":10}}]},{""fieldName"":""checkNotice"",""label"":""依據「勞工保護規則」第15條，急救藥品與器材，應置於適當固定處所，至少每六個月定期檢查並保持清潔。對於被污染或失效之物品，應隨時予以更換及補充。\n1.檢查重點：(1)檢查數量，用罄應立即補充(2)檢查有效期限。\n2.各單位得視現場情況自行增減或修訂其項目及數量且應詳實記錄。\n3.檢查結果：(1)正常－數量正確且在有效期限內(2)異常－數量不符(3)過期－超過有效期限。\n4.每種物品標示保存期限不同，應定期檢查其有效日期，急救箱平時應放置於陰涼、乾燥、易拿取方便的固定位置。\n5.此檢查表請於每年1/31及7/31。\n6.若有問題聯絡電話。"",""type"":""STATIC_TEXT"",""required"":false,""displayOrder"":5}]}"	"FIRST_AID_KIT_CHECK_FORM"	4	57
